@@ -9756,7 +9756,8 @@ body {
 
 /* Home Page Style */
 .ww-home-page {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/main-background.jpeg") no-repeat center center;
+    /*todo 사진 수정 확인*/
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/main-background.png") no-repeat center center;
     background-size: cover;
     background-position: 50%;
     height: 100vh;

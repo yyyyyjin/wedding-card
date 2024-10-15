@@ -1,5 +1,5 @@
 # 박영진과 정세라의 결혼식 모바일 청첩장
-![date](https://img.shields.io/date/1702550400.svg?style=for-the-badge)
+![date](https://img.shields.io/date/1734182400.svg?style=for-the-badge)
 
 
 * https://github.com/AndersonChoi/wedding-card 
