@@ -373,12 +373,27 @@
 <div class="bottom_left">
     <audio id="player" src="mus.mp3"></audio> <!--음원 연결-->
     <div>
-        <i class="fa fa-music fa-2x" onclick="document.getElementById('player').play()"></i>
-    </div>
-    <div>
-        <i class="fa fa-music fa-2x" onclick="document.getElementById('player').pause()"></i>
+        <i id="musicToggle" class="fa fa-music fa-2x" onclick="toggleMusic()"></i>
     </div>
 </div>
+
+<script> // 음악 재생 / 중지 토글
+    let isPlaying = false;
+
+    function toggleMusic() {
+        const player = document.getElementById('player');
+
+        if (isPlaying) {
+            player.pause();
+        } else {
+            player.play();
+        }
+
+        isPlaying = !isPlaying;
+    }
+</script>
+
+
 
 </body>
 </html>
