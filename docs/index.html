@@ -332,7 +332,7 @@
                             <div class="h4">신랑측 계좌번호</div>
                             <ul>
                                 <li>
-                                    <i class="text-muted fas fa-acc-acc-alt"></i>
+                                    <i class="text-muted fas fa-acc-alt"></i>
                                     <span class="pl-2 text-muted">박광석 부산은행 277-12-021190-6 (박영진)</span>
                                     <button class="copy" data-account="277120211906">복사하기</button>
                                 </li>
@@ -464,25 +464,24 @@
     }
 </script>
 <script> <!-- 계좌번호 복사 -->
-    document.addEventListener('DOMContentLoaded', function (){
-        const copybtns = document.querySelectoAll('.copy');
+    document.addEventListener('DOMContentLoaded', function() {
+        const copyButtons = document.querySelectorAll('.copy');
 
-        copybtns.forEach(button => {
-            button.addEventListener(('click', function(){
+        copyButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const accNum = this.getAttribute('data-account');
 
-                const accnum = this.getAttribute('data-account');
-
-                navigator.clipboard.writeText(accnum).then(()=>{
+                navigator.clipboard.writeText(accNum).then(() => {
                     button.textContent = '복사되었습니다!';
-                    setTimeout(()=> {
+                    setTimeout(() => {
                         button.textContent = '복사하기';
-                    },2000);
+                    }, 2000);
                 }).catch(err => {
-                    console.error('Failed to copy :', err);
-                })
-            }))
-        })
-    })
+                    console.error('Failed to copy:', err);
+                });
+            });
+        });
+    });
 </script>
 
 
