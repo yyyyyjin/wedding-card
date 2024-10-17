@@ -465,11 +465,13 @@
 </script>
 <script> <!-- 계좌번호 복사 -->
     document.addEventListener('DOMContentLoaded', function (){
-        const copybtn = document.querySelectoAll('.copy');
+        const copybtns = document.querySelectoAll('.copy');
 
-        copybtn.forEach(button => {
+        copybtns.forEach(button => {
             button.addEventListener(('click', function(){
-                const accnum = this.getAttribute('data-account')
+
+                const accnum = this.getAttribute('data-account');
+
                 navigator.clipboard.writeText(accnum).then(()=>{
                     button.textContent = '복사되었습니다!';
                     setTimeout(()=> {
