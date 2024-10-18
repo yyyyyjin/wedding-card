@@ -289,6 +289,45 @@
             </div>
         </div>
 
+        <div class="ww-section bg-light" id="comment"> <!-- 숨김 style="display: none" -->
+            <div class="ww-photo-gallery">
+                <div class="container">
+                    <div class="col text-center">
+                        <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">참석 여부를 알려주세요</h2><br>
+                        <div id="comments">
+                            <div>
+                                <h6 style="font-family: 'Noto Serif KR', serif;">참석의 부담은 가지지 마시고,</h6>
+                                <h6 style="font-family: 'Noto Serif KR', serif;">정성껏 준비하기 위함이니 알려 주시면 감사하겠습니다.</h6>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+
+                            <div class="col text-center">
+                                <form action="https://script.google.com/macros/s/AKfycbxbf12k5d-wD_XNSNrq6cb8JOVMqfFH3od4tcpua4Spyxr2UeCdVUFpw7RcQ4EUO92N/exec"
+                                      method="POST" target="hidden_iframe">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" placeholder="홍길동"><br><br>
+
+                                    <label for="contact">Contact:</label>
+                                    <input type="contact" id="contact" name="contact" placeholder="010-1234-5678"><br><br>
+
+                                    <label for="message">Message:</label>
+
+                                    <textarea id="message" name="message" placeholder="참석 또는 불참, 간단한 축하 메시지를 남겨주세요"></textarea>
+                                    <br><br>
+
+                                    <button class="btn btn-primary btn-submit" type="submit">보내기</button>
+
+                                </form>
+                                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
         <div class="ww-section ww-rsvp-detail" id="map">
@@ -400,48 +439,9 @@
         </div>
 
 
-        <div class="ww-section bg-light" id="comment"> <!-- 숨김 style="display: none" -->
-            <div class="ww-photo-gallery">
-                <div class="container">
-                    <div class="col text-center">
-                        <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">참석 여부를 알려주세요</h2><br>
-                        <div id="comments">
-                            <div>
-                                <h6 style="font-family: 'Noto Serif KR', serif;">참석의 부담은 가지지 마시고, <br>
-                                    정성껏 준비하기 위함이니 알려 주시면 감사하겠습니다.</h6>
 
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-
-                            <div class="col text-center">
-                                <form action="https://script.google.com/macros/s/AKfycbxbf12k5d-wD_XNSNrq6cb8JOVMqfFH3od4tcpua4Spyxr2UeCdVUFpw7RcQ4EUO92N/exec"
-                                      method="POST" target="hidden_iframe">
-                                    <label for="name">Name:</label>
-                                    <input type="text" id="name" name="name" placeholder="홍길동"><br><br>
-
-                                    <label for="contact">Contact:</label>
-                                    <input type="contact" id="contact" name="contact" placeholder="010-1234-5678"><br><br>
-
-                                    <label for="message">Message:</label>
-
-                                    <textarea id="message" name="message" placeholder="참석 또는 불참, 간단한 축하 메시지를 남겨주세요"></textarea>
-                                    <br><br>
-
-                                    <button class="btn btn-primary btn-submit" type="submit">보내기</button>
-
-                                </form>
-                                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </div>
-</div>
 </div>
 <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="giftMailModal" role="dialog"
      tabindex="-1">
