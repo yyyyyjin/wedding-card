@@ -128,9 +128,12 @@
             text-decoration: underline;
         }
 
-        .acc-ul {
-            display: none;
+        /*.acc-ul {*/
+        /*    display: none;*/
+        /*}*/
 
+        .copy{
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -409,19 +412,19 @@
                         <div class="h4" id="acc-btn1">신랑측 계좌번호 확인하기</div>
                         <ul class="acc-ul" id="acc-list1">
                             <li>
-                                <i class="text-muted fas fa-acc-alt"></i>
+                                <i class="text-muted fas fa-acc-alt"></i>iㅇ장
                                 <span class="pl-2 text-muted">박광석 부산은행 277-12-021190-6 (박영진)</span>
-                                <span style="margin-left: 20px"></span><button class="copy" data-account="277120211906">복사하기</button>
+                                <span style="margin-left: 10px"></span><br><button class="copy" data-account="277120211906">복사하기</button>
                             </li>
                             <li>
                                 <i class="text-muted far fa-acc-alt2"></i>
                                 <span class="pl-2 text-muted">최천숙 부산은행 277-12-000089-3</span>
-                                <span style="margin-left: 20px"></span><button class="copy" data-account="277120000893">복사하기</button>
+                                <span style="margin-left: 10px"></span><br><button class="copy" data-account="277120000893">복사하기</button>
                             </li>
                             <li>
                                 <i class="text-muted far fa-acc-alt3"></i>
                                 <span class="pl-2 text-muted">박영진 카카오뱅크 3333-05-3078634</span>
-                                <span style="margin-left: 20px"></span><button class="copy" data-account="3333053078634">복사하기</button>
+                                <span style="margin-left: 10px"></span><br><button class="copy" data-account="3333053078634">복사하기</button>
                             </li>
                         </ul>
                     </div>
@@ -431,17 +434,17 @@
                             <li>
                                 <i class="text-muted fas fa-acc-alt "></i>
                                 <span class="pl-2 text-muted">정덕구 경남은행 587-21-0093895</span>
-                                <span style="margin-left: 20px"></span><button class="copy" data-account="587210093895">복사하기</button>
+                                <span style="margin-left: 10px"></span><br><button class="copy" data-account="587210093895">복사하기</button>
                             </li>
                             <li>
                                 <i class="text-muted far fa-acc-alt2 "></i>
                                 <span class="pl-2 text-muted">라성숙 경남은행 578-22-0404169</span>
-                                <span style="margin-left: 20px"></span><button class="copy" data-account="578220404169">복사하기</button>
+                                <span style="margin-left: 10px"></span><br><button class="copy" data-account="578220404169">복사하기</button>
                             </li>
                             <li>
                                 <i class="text-muted far fa-acc-alt2 "></i>
                                 <span class="pl-2 text-muted">정세라 농협 866-12-431337</span>
-                                <span style="margin-left: 20px"></span><button class="copy" data-account="86612431337">복사하기</button>
+                                <span style="margin-left: 10px"></span><br><button class="copy" data-account="86612431337">복사하기</button>
                             </li>
                         </ul>
                     </div>
@@ -519,6 +522,7 @@
 </script>
 <script>
     <!-- 계좌번호보이게 -->
+
     document.addEventListener('DOMContentLoaded', function() {
         const accList1 = document.getElementById('acc-list1');
         const accList2 = document.getElementById('acc-list2');
@@ -622,8 +626,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         form.submit();
         submitBtn.textContent = '보냈습니다!';
+        setTimeout(() => {
+            submitBtn.textContent = '다시보내기';
+        }, 5000);
     });
-
 
 
 
