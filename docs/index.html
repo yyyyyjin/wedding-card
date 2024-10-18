@@ -416,19 +416,20 @@
                         <div class="row">
 
                             <div class="col text-center">
-                                <form action="https://script.google.com/macros/s/AKfycbxbf12k5d-wD_XNSNrq6cb8JOVMqfFH3od4tcpua4Spyxr2UeCdVUFpw7RcQ4EUO92N/exec" method="POST">
+                                <form action="https://script.google.com/macros/s/AKfycbxbf12k5d-wD_XNSNrq6cb8JOVMqfFH3od4tcpua4Spyxr2UeCdVUFpw7RcQ4EUO92N/exec"
+                                      method="POST" target="hidden_iframe">
                                     <label for="name">Name:</label>
-                                    <input type="text" id="name" name="name"><br><br>
+                                    <input type="text" id="name" name="name" placeholder="홍길동"><br><br>
 
                                     <label for="contact">Contact:</label>
-                                    <input type="contact" id="contact" name="contact"><br><br>
+                                    <input type="contact" id="contact" name="contact" placeholder="010-1234-5678"><br><br>
 
                                     <label for="message">Message:</label>
 
-                                    <textarea id="message" name="message" placeholder="참석하시는분 성함과, 참석 인원을 적어 주세요"></textarea>
+                                    <textarea id="message" name="message" placeholder="참석 또는 불참, 간단한 축하 메시지를 남겨주세요"></textarea>
                                     <br><br>
 
-                                    <button class="btn btn-primary btn-submit" type="submit">전송</button>
+                                    <button class="btn btn-primary btn-submit" type="submit">보내기</button>
 
                                 </form>
                                 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
@@ -561,6 +562,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+</script>
+
+<script> <!-- form 전송 처리 -->
+    const form = document.querySelector('form');
+    const iframe = document.getElementById('hidden_iframe');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        iframe.onload = () => {
+            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            const result = iframeDocument.body.textContent;
+
+            alert(result);
+        };
+
+        form.submit();
+    });
 </script>
 
 <script> <!-- 사진 크게 확인 -->
