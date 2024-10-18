@@ -122,6 +122,16 @@
         * {
             border: solid 1px rebeccapurple;
         }
+
+        #acc-btn1, #acc-btn2 {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .acc-ul {
+            display: none;
+
+        }
     </style>
 </head>
 
@@ -396,8 +406,8 @@
 <!--                </div>-->
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="h4">신랑측 계좌번호</div>
-                        <ul>
+                        <div class="h4" id="acc-btn1">신랑측 계좌번호 확인하기</div>
+                        <ul class="acc-ul" id="acc-list1">
                             <li>
                                 <i class="text-muted fas fa-acc-alt"></i>
                                 <span class="pl-2 text-muted">박광석 부산은행 277-12-021190-6 (박영진)</span>
@@ -416,8 +426,8 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <div class="h4">신부측 계좌번호</div>
-                        <ul>
+                        <div class="h4" id="acc-btn2">신부측 계좌번호 확인하기</div>
+                        <ul class="acc-ul" id="acc-list2">
                             <li>
                                 <i class="text-muted fas fa-acc-alt "></i>
                                 <span class="pl-2 text-muted">정덕구 경남은행 587-21-0093895</span>
@@ -507,7 +517,35 @@
     }
     toggleMusic();
 </script>
-<script> <!-- 계좌번호 복사 -->
+<script>
+    <!-- 계좌번호보이게 -->
+    document.addEventListener('DOMContentLoaded', function() {
+        const accList1 = document.getElementById('acc-list1');
+        const accList2 = document.getElementById('acc-list2');
+
+        const toggleHeader1 = document.getElementById('acc-btn1');
+        const toggleHeader2 = document.getElementById('acc-btn2');
+
+
+        toggleHeader1.addEventListener('click', function () {
+            if (accList1.style.display === 'none' || accList1.style.display === '') {
+                accList1.style.display = 'block'; // Show the account numbers
+            } else {
+                accList1.style.display = 'none'; // Hide the account numbers
+            }
+        });
+        toggleHeader2.addEventListener('click', function () {
+            if (accList2.style.display === 'none' || accList2.style.display === '') {
+                accList2.style.display = 'block'; // Show the account numbers
+            } else {
+                accList2.style.display = 'none'; // Hide the account numbers
+            }
+        });
+
+    });
+
+
+    <!-- 계좌번호 복사 -->
     document.addEventListener('DOMContentLoaded', function() {
         const copyButtons = document.querySelectorAll('.copy');
 
