@@ -27,9 +27,23 @@
     <!-- load more CSS style -->
     <style>
         #image-container .card {
-            display: none; /* Initially hide all cards */
-            max-width: 30vw;
+            /*display: none; !* Initially hide all cards *!*/
+            /*max-width: calc(33.33% - 10px);*/
+            overflow: hidden;
+            /*aspect-ratio: 10 / 13;*/
         }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            max-height: 130px;
+            display: block;
+            /* 고정된 높이 */
+            object-fit: cover; /* 이미지가 고정된 크기에 맞도록 조정 */
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
 
         #load-more {
             display: block;
@@ -111,6 +125,19 @@
 
 
     </style>
+    <!-- 갤러리 -->
+    <style>
+        .gallery-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+
+
+
+
+    </style>
 </head>
 
 <body id="top">
@@ -119,6 +146,7 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2"></script>
 <div class="page-content">
     <div class="div">
+
         <div class="ww-home-page" id="home">
             <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
                 <div class="container ww-announcement-container">
@@ -134,6 +162,7 @@
                 </div>
             </div>
         </div>
+
         <div class="ww-nav-bar sticky-top bg-light">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
@@ -153,27 +182,7 @@
                 </div>
             </nav>
         </div>
-<!--        <div class="ww-section" id="couple">-->
-<!--            <div class="container" style="display: none">-->
-<!--                <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">신랑 & 신부</h2>-->
-<!--                <div class="row text-center">-->
-<!--                    <div class="col-md-6">-->
-<!--                        <div class="mt-3">-->
-<!--                            <h3 class="h2 ww-title" style="font-family: 'Sunflower', sans-serif; font-size:1.5em">-->
-<!--                                정세라</h3>-->
-<!--                            <img alt="Groom" class="img-fluid" src="images/updated.png"/> &lt;!&ndash; pic8 &ndash;&gt;-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-6">-->
-<!--                        <div class="mt-3">-->
-<!--                            <h3 class="h2 ww-title" style="font-family: 'Sunflower', sans-serif; font-size:1.5em">-->
-<!--                                박영진</h3>-->
-<!--                            <img alt="Bride" class="img-fluid" src="images/updated.png"/> &lt;!&ndash; pic9 &ndash;&gt;-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+
         <div class="ww-section bg-light" id="events">
             <div class="container ww-wedding-event align-items-center">
                 <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">초대합니다</h2>
@@ -227,12 +236,43 @@
                 </div>
             </div>
         </div>
+
         <div class="ww-section" id="gallery">
             <div class="ww-photo-gallery">
                 <div class="container">
                     <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">포토 갤러리</h2>
+
+                    <!-- test -->
+<!--                    <div class="gallery-container">-->
+
+<!--                            <div class="card">-->
+
+<!--                                <img alt="Gallery Pic t1" class="img-fluid" src="images/2JB00987-2.jpg"/>-->
+<!--                            </div>-->
+<!--                            <div class="card">-->
+<!--                                <img alt="Gallery Pic t2" class="img-fluid" src="images/2JB00987-2.jpg"/>-->
+<!--                            </div>-->
+<!--                            <div class="card">-->
+<!--                                <img alt="Gallery Pic t3" class="img-fluid" src="images/2JB00987-2.jpg"/>-->
+<!--                            <br>-->
+<!--                            </div>-->
+<!--                            <div class="card">-->
+<!--                                <img alt="Gallery Pic t4" class="img-fluid" src="images/2JB00987-2.jpg"/>-->
+<!--                            </div>-->
+<!--                            <div class="card">-->
+<!--                                <div class="ph"></div>-->
+<!--                                <img alt="Gallery Pic t5" class="img-fluid" src="images/2JB00987-2.jpg"/>-->
+<!--                            </div>-->
+<!--                    </div>-->
+
+
+
+
+
+
+
                     <div class="ww-gallery">
-                        <div class="card-columns" id="image-container">
+                        <div class="gallery-container" id="image-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; overflow: hidden">
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]">
                                 <a data-gallery="ww-gallery" data-toggle="lightbox">
                                     <img alt="Gallery Pic 2" class="img-fluid" src="images/2JB00987-2.jpg"/> <!-- pic2 -->
@@ -271,7 +311,7 @@
                             </div>
 
                         </div>
-                        <button id="load-more">+</button>
+<!--                        <button id="load-more">+</button>-->
 
                     </div>
                 </div>
@@ -642,44 +682,45 @@ function selectOption2(selectedDiv) {
 
 
 <!--사진 갤러리 관련 스크립트-->
+<!-- 사진 추가 로드 한번에 로드하니까 주석처리 11/1-->
+<script>
 
-<script><!-- 사진 추가 로드 -->
-document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('image-container');
-    const loadMoreBtn = document.getElementById('load-more');
-    const cards = container.getElementsByClassName('card');
-    const cardsToShow = 3; // Number of cards to show initially and each load
-    let currentIndex = 0;
-
-    function showCards(startIndex, endIndex) {
-        for (let i = startIndex; i < endIndex && i < cards.length; i++) {
-            cards[i].style.display = 'block';
-        }
-    }
-
-    function hideAllCards() {
-        for (let card of cards) {
-            card.style.display = 'none';
-        }
-    }
-
-    // Initially hide all cards
-    hideAllCards();
-
-    // Show the first set of cards
-    showCards(0, cardsToShow);
-    currentIndex = cardsToShow;
-
-    loadMoreBtn.addEventListener('click', function() {
-        showCards(currentIndex, currentIndex + cardsToShow);
-        currentIndex += cardsToShow;
-
-        // Hide the button if all cards are shown
-        if (currentIndex >= cards.length) {
-            loadMoreBtn.style.display = 'none';
-        }
-    });
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//     const container = document.getElementById('image-container');
+//     const loadMoreBtn = document.getElementById('load-more');
+//     const cards = container.getElementsByClassName('card');
+//     const cardsToShow = 3; // Number of cards to show initially and each load
+//     let currentIndex = 0;
+//
+//     function showCards(startIndex, endIndex) {
+//         for (let i = startIndex; i < endIndex && i < cards.length; i++) {
+//             cards[i].style.display = 'block';
+//         }
+//     }
+//
+//     function hideAllCards() {
+//         for (let card of cards) {
+//             card.style.display = 'none';
+//         }
+//     }
+//
+//     // Initially hide all cards
+//     hideAllCards();
+//
+//     // Show the first set of cards
+//     showCards(0, cardsToShow);
+//     currentIndex = cardsToShow;
+//
+//     loadMoreBtn.addEventListener('click', function() {
+//         showCards(currentIndex, currentIndex + cardsToShow);
+//         currentIndex += cardsToShow;
+//
+//         // Hide the button if all cards are shown
+//         if (currentIndex >= cards.length) {
+//             loadMoreBtn.style.display = 'none';
+//         }
+//     });
+// });
 </script>
 
 <script> <!-- 사진 크게 확인 -->
