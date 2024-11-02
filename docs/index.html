@@ -26,11 +26,17 @@
 
     <!-- load more CSS style -->
     <style>
+
+
+        * {
+            border: solid 1px rebeccapurple;
+        }
+
+
         #image-container .card {
+            /* 갤러리 만들기 전 display 속성 */
             /*display: none; !* Initially hide all cards *!*/
-            /*max-width: calc(33.33% - 10px);*/
             overflow: hidden;
-            /*aspect-ratio: 10 / 13;*/
         }
 
         .card img {
@@ -59,9 +65,8 @@
         #load-more:hover {
             background-color: #b36b00;
         }
-        * {
-            /*border: solid 1px rebeccapurple;*/
-        }
+
+
 
         #acc-btn1, #acc-btn2 {
             cursor: pointer;
@@ -105,15 +110,21 @@
             color: white;
         }
 
-        .selected label[for="rsvp-side-gr"]  {
+        .radio.grbr .blue.selected{
             background-color: #346da8;
             color: white;
         }
 
-        .selected label[for="rsvp-side-br"]  {
+
+        .radio.grbr .red.selected{
             background-color: #bc6bb3;
             color: white;
         }
+
+        /*.selected label[for="rsvp-side-br"]  {*/
+        /*    background-color: #bc6bb3;*/
+        /*    color: white;*/
+        /*}*/
 
         /* 라디오 버튼 숨기기 */
         .radio input[type="radio"] {
@@ -130,11 +141,25 @@
             gap: 8px;
         }
 
+    </style>
 
+    <style>
+        .form-wrap {
+            max-height: 0;               /* 기본 높이 0 */
+            overflow: hidden;            /* 넘치는 내용 숨김 */
+            opacity: 0;                  /* 기본 투명하게 */
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+            display: none;               /* 처음에는 표시되지 않음 */
+        }
 
-
+        .form-wrap.show {
+            display: block;              /* 보이게 설정 */
+            max-height: 200px;           /* 충분한 높이 (필요 시 조정) */
+            opacity: 1;                  /* 불투명하게 설정 */
+        }
 
     </style>
+
 </head>
 
 <body id="top">
@@ -147,7 +172,7 @@
         <div class="ww-home-page" id="home">
             <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
                 <div class="container ww-announcement-container">
-                    <p class="ww-couple-name ww-title" style="font-size:3.5em">James & Sarah</p>
+                    <p class="ww-couple-name ww-title" style="font-size:3.3em">James & Sarah</p>
                     <p class="h2 mt-5 ww-title" style="font-family: 'Gugi', cursive; font-size:1.0em">
                         | WE ARE GETTING MARRIED |
                     </p>
@@ -188,6 +213,21 @@
                         <h6 style="font-family: 'Noto Serif KR', serif;">
                             <br>
                             <!-- 1144 삭제 -->
+                            <div class="h4"></div>
+                            <ul>
+                                <li>
+                                    <i class="text-muted"></i>
+                                    <span class="pl-3 text-muted" >박광석 · 최천숙 의 아들 박영진</span><br>
+                                    <span class="pl-3 text-muted" >정덕구 · 라성숙 의 딸  정세라 </span>
+                                </li>
+                                <li class="pt-2">
+                                    <i class="text-muted"></i>
+                                    <span class="pl-1 text-muted">
+                                        앞으로 평생을 함께,<br>
+                                        한 가정을 이루어 살아가고자 합니다.<br>
+                                        오셔서 축복해주시면 감사하겠습니다.</span>
+                                </li>
+                            </ul>
                         </h6>
                     </div>
                 <div class="row">
@@ -209,7 +249,7 @@
                     </div>
                     <div class="col-md-5 col-sm-12">
                         <div class="my-3">
-                            <img alt="Wedding Party" class="img-fluid" src="images/wedding-party-resize.png"/>
+                            <img alt="Wedding Party" class="img-fluid" src="images/webptest.webp"/>
                         </div>
                     </div>
                 </div>
@@ -271,7 +311,7 @@
                             </div>
                             <div class="card" data-groups="[&quot;vacation&quot;]">
                                 <a data-gallery="ww-gallery" data-toggle="lightbox">
-                                    <img alt="Gallery Pic 7" class="img-fluid" src="images/2JB01445-1.jpg"/> <!-- pic5 -->
+                                    <img alt="Gallery Pic 7" class="img-fluid" src="images/1445-1.webp"/> <!-- pic5 -->
                                 </a>
                             </div>
                             <div class="card" data-groups="[&quot;vacation&quot;]">
@@ -292,15 +332,16 @@
             <div class="ww-photo-gallery">
                 <div class="container">
                     <div class="col text-center">
-                        <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">참석 여부를 알려주세요</h2><br>
+                        <h2 class="h4 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">참석 여부를 알려주세요</h2><br>
                         <div id="comments">
                             <div>
                                 <h6 style="font-family: 'Noto Serif KR', serif;">참석의 부담은 가지지 마시고,</h6>
-                                <h6 style="font-family: 'Noto Serif KR', serif;">정성껏 준비하기 위함이니 알려 주시면 감사하겠습니다.</h6>
+                                <h6 style="font-family: 'Noto Serif KR', serif;">정성껏 준비하기 위함이니 <br>알려 주시면 감사하겠습니다. <br><br>
+                                    <span class="formShowBtn"style="text-decoration: underline; text-underline: darkblue">📝입력하기</span></h6>
                             </div>
                         </div>
                         <br>
-                        <div class="row" style="margin: auto">
+                        <div class="row form-wrap" id="form-wrap" style="margin: auto">
                             <form style="margin: auto" action="https://script.google.com/macros/s/AKfycbxbf12k5d-wD_XNSNrq6cb8JOVMqfFH3od4tcpua4Spyxr2UeCdVUFpw7RcQ4EUO92N/exec"
                                   method="POST" target="hidden_iframe">
                             <table>
@@ -314,11 +355,11 @@
                                     <th>구분</th>
                                     <td>
                                         <div class="radio grbr">
-                                            <div onclick="selectOption2(this)">
+                                            <div onclick="selectOption2(this)" class="blue">
                                                 <input type="radio" id="rsvp-side-gr" value="groom" name="rsvp-side" checked="checked">
                                                 <label for="rsvp-side-gr" class="blue-fill">신랑측</label>
                                             </div>
-                                            <div onclick="selectOption2(this)">
+                                            <div onclick="selectOption2(this)" class="red">
                                                 <input type="radio" id="rsvp-side-br" value="bride" name="rsvp-side">
                                                 <label for="rsvp-side-br" class="red-fill">신부측</label>
                                             </div>
@@ -362,7 +403,7 @@
                                     <td colspan="2">
                                         <div class="greet-msg">
                                             <textarea style="width: 80%" rows="5" id="message" name="message"
-                                                      placeholder="참석인원은 본인 포함 숫자로 입력해주세요,
+                                                      placeholder="참석인원은 본인 포함 숫자로 입력해 주시고,
                                                       이곳에 간단한 축하 메시지를 남겨주세요"></textarea>
                                         </div>
                                     </td>
@@ -404,10 +445,10 @@
         <div class="ww-section ww-rsvp-detail" id="map">
             <div class="container">
                 <div class="col text-center">
-                    <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">오시는 길</h2>
+                    <h2 class="h2 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">오시는 길</h2>
                     <div>
-                        <h5 style="font-family: 'Noto Serif KR', serif;">김해 메르시앙웨딩홀 6층, 포레스트 가든홀</h5>
-                        <h6 style="font-family: 'Noto Serif KR', serif;">(김해시 내동 1131-4)</h6>
+                        <h5 style="font-family: 'Noto Serif KR', serif;">김해 메르시앙웨딩홀 6층, <br>포레스트 가든홀</h5>
+                        <h7 style="font-family: 'Noto Serif KR', serif;">(김해시 내동 1131-4)</h7>
                     </div>
                 </div>
 
@@ -432,7 +473,7 @@
 <!--                            </a>-->
                         </div>
                         <div class="col text-center">
-                            <label style="font-family: 'Noto Serif KR', serif; font-size: 15px;">
+                            <label style="font-family: 'Noto Serif KR', serif; font-size: 12px;">
                                 주차는 06:00 ~ 16:00 자유롭게 가능합니다.
                             </label>
                         </div>
@@ -457,10 +498,10 @@
 
         <div class="ww-section bg-light" id="congratulatory">
             <div class="container">
-                <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">마음을 전하실 곳</h2>
-                <div class="row">
+                <h2 class="h3 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">마음을 전하실 곳</h2>
+                <div class="row" style="text-align: center">
                     <div class="col-md-6">
-                        <div class="h4" id="acc-btn1">신랑측 계좌번호 확인하기</div>
+                        <div class="h5" id="acc-btn1">신랑측 계좌번호 확인하기</div>
                         <ul class="acc-ul" id="acc-list1">
                             <li>
                                 <i class="text-muted fas fa-acc-alt"></i>
@@ -480,7 +521,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <div class="h4" id="acc-btn2">신부측 계좌번호 확인하기</div>
+                        <div class="h5" id="acc-btn2">신부측 계좌번호 확인하기</div>
                         <ul class="acc-ul" id="acc-list2">
                             <li>
                                 <i class="text-muted fas fa-acc-alt "></i>
@@ -557,43 +598,62 @@
 
         toggleHeader1.addEventListener('click', function () {
             if (accList1.style.display === 'none' || accList1.style.display === '') {
-                accList1.style.display = 'block'; // Show the account numbers
+                accList1.style.display = 'none'; // Show the account numbers
             } else {
-                accList1.style.display = 'none'; // Hide the account numbers
+                accList1.style.display = 'block'; // Hide the account numbers
             }
         });
         toggleHeader2.addEventListener('click', function () {
             if (accList2.style.display === 'none' || accList2.style.display === '') {
                 accList2.style.display = 'block'; // Show the account numbers
+
             } else {
                 accList2.style.display = 'none'; // Hide the account numbers
             }
+            // });
+
+            // toggleHeader1.addEventListener('click', function (){
+            //     accList1.classList.toggle('show');
+            // });
+
+
         });
 
-    });
 
+        <!-- 계좌번호 복사 -->
+        document.addEventListener('DOMContentLoaded', function () {
+            const copyButtons = document.querySelectorAll('.copy');
 
-    <!-- 계좌번호 복사 -->
-    document.addEventListener('DOMContentLoaded', function() {
-        const copyButtons = document.querySelectorAll('.copy');
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const accNum = this.getAttribute('data-account');
 
-        copyButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const accNum = this.getAttribute('data-account');
-
-                navigator.clipboard.writeText(accNum).then(() => {
-                    button.textContent = '복사되었습니다!';
-                    setTimeout(() => {
-                        button.textContent = '복사하기';
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy:', err);
+                    navigator.clipboard.writeText(accNum).then(() => {
+                        button.textContent = '복사되었습니다!';
+                        setTimeout(() => {
+                            button.textContent = '복사하기';
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy:', err);
+                    });
                 });
             });
         });
     });
 </script>
 
+
+<!-- form 보이게 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const formdiv = document.getElementById('form-wrap');
+        const formShowButton = document.getElementsByClassName('formShowBtn');
+
+        formShowButton.addEventListener('click', function () {
+            formdiv.classList.add('show');
+        });
+    });
+</script>
 
 
 <script> <!-- form 전송 처리 -->
@@ -603,17 +663,11 @@
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
-
-        // iframe.onload = () => {
-        //     const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        //     const result = iframeDocument.body.textContent;
-        //
-        //     // alert(result); alert 안뜸
-        // };
-
         form.submit();
         submitBtn.textContent = '보냈습니다!';
+
         alert("감사합니다 :)")
+
         setTimeout(() => {
             submitBtn.textContent = '다시보내기';
         }, 5000);
@@ -625,7 +679,7 @@
 function selectOption2(selectedDiv) {
     // 모든 옵션의 선택 해제
     const options2 = document.querySelectorAll('.radio.grbr div');
-    options2.forEach(option => option.classList.remove('selected'));
+    options2.forEach(option2 => option2.classList.remove('selected'));
 
     // 클릭한 옵션 선택 상태로 설정
     selectedDiv.classList.add('selected');
@@ -645,9 +699,6 @@ function selectOption2(selectedDiv) {
     // 내부의 라디오 버튼 선택
     selectedDiv.querySelector('input[type="radio"]').checked = true;
 }
-
-
-
 </script>
 
 
