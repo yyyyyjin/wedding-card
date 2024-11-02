@@ -108,15 +108,12 @@
         .selected label[for="rsvp-side-gr"]  {
             background-color: #346da8;
             color: white;
-
         }
 
         .selected label[for="rsvp-side-br"]  {
             background-color: #bc6bb3;
             color: white;
-
         }
-
 
         /* 라디오 버튼 숨기기 */
         .radio input[type="radio"] {
@@ -212,7 +209,7 @@
                     </div>
                     <div class="col-md-5 col-sm-12">
                         <div class="my-3">
-                            <img alt="Wedding Party" class="img-fluid" src="images/wedding-party.png"/>
+                            <img alt="Wedding Party" class="img-fluid" src="images/wedding-party-resize.png"/>
                         </div>
                     </div>
                 </div>
@@ -243,35 +240,6 @@
             <div class="ww-photo-gallery">
                 <div class="container">
                     <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">포토 갤러리</h2>
-
-                    <!-- test -->
-<!--                    <div class="gallery-container">-->
-
-<!--                            <div class="card">-->
-
-<!--                                <img alt="Gallery Pic t1" class="img-fluid" src="images/2JB00987-2.jpg"/>-->
-<!--                            </div>-->
-<!--                            <div class="card">-->
-<!--                                <img alt="Gallery Pic t2" class="img-fluid" src="images/2JB00987-2.jpg"/>-->
-<!--                            </div>-->
-<!--                            <div class="card">-->
-<!--                                <img alt="Gallery Pic t3" class="img-fluid" src="images/2JB00987-2.jpg"/>-->
-<!--                            <br>-->
-<!--                            </div>-->
-<!--                            <div class="card">-->
-<!--                                <img alt="Gallery Pic t4" class="img-fluid" src="images/2JB00987-2.jpg"/>-->
-<!--                            </div>-->
-<!--                            <div class="card">-->
-<!--                                <div class="ph"></div>-->
-<!--                                <img alt="Gallery Pic t5" class="img-fluid" src="images/2JB00987-2.jpg"/>-->
-<!--                            </div>-->
-<!--                    </div>-->
-
-
-
-
-
-
 
                     <div class="ww-gallery">
                         <div class="gallery-container" id="image-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; overflow: hidden">
@@ -656,7 +624,7 @@
 <!-- 신랑측신부측 -->
 function selectOption2(selectedDiv) {
     // 모든 옵션의 선택 해제
-    const options2 = document.querySelectorAll('.radio div');
+    const options2 = document.querySelectorAll('.radio.grbr div');
     options2.forEach(option => option.classList.remove('selected'));
 
     // 클릭한 옵션 선택 상태로 설정
