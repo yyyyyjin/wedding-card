@@ -348,15 +348,15 @@
                         <div id="comments">
                             <div>
                                 <h6 style="font-family: 'Noto Serif KR', serif;">참석의 부담은 가지지 마시고,</h6>
-                                <h6 style="font-family: 'Noto Serif KR', serif;">정성껏 준비하기 위함이니 <br>알려 주시면 감사하겠습니다. <br><br>
-                                    <span class="formShowBtn"style="text-decoration: underline; text-underline: darkblue">📝입력하기</span></h6>
+                                <h6 style="font-family: 'Noto Serif KR', serif;">정성껏 준비하기 위함이니 <br>알려 주시면 감사하겠습니다.</h6> <br><br>
+                                    <div id="formShowBtn" class="formShowBtn" style="text-decoration: underline; text-underline: darkblue">📝입력하기</div>
                             </div>
                         </div>
                         <br>
-                        <div class="row form-wrap" id="form-wrap" style="margin: auto">
+                        <div class="row form-wrap" id="form-wrap" style="margin: auto; align-content: center">
                             <form style="margin: auto" action="https://script.google.com/macros/s/AKfycbxbf12k5d-wD_XNSNrq6cb8JOVMqfFH3od4tcpua4Spyxr2UeCdVUFpw7RcQ4EUO92N/exec"
                                   method="POST" target="hidden_iframe">
-                            <table>
+                            <table style="margin: auto">
                                 <colgroup>
                                     <col style="width: 80px">
                                     <col>
@@ -659,7 +659,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const formdiv = document.getElementById('form-wrap');
-        const formShowButton = document.getElementsByClassName('formShowBtn');
+        const formShowButton = document.getElementById('formShowBtn');
 
         formShowButton.addEventListener('click', function () {
             formdiv.classList.add('show');
