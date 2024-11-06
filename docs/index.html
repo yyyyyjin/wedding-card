@@ -175,6 +175,7 @@
     <style>
         .acc-ul{
             list-style-type: none;
+            list-style: none;
         }
     </style>
 
@@ -540,7 +541,18 @@
                     <!-- 계좌 임시 수정중 -->
 
                     <div class="col-md-6">
-                        <div class="h5" id="acc-btn1">신랑측 계좌번호 확인하기</div>
+                        <div class="h5" id="acc-btn1">신랑측 계좌번호</div>
+                        <table>
+<!--                            <tr>-->
+<!--                                <td>박광석</td><td>&nbsp부산은행&nbsp</td><td>277-12-021190-6 (박영진)</td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>최천숙</td><td>&nbsp부산은행&nbsp</td><td>277-12-000089-3</td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>박영진</td><td>&nbsp카카오뱅크&nbsp</td><td>3333-05-3078634</td>-->
+<!--                            </tr>-->
+                        </table>
                         <ul class="acc-ul" id="acc-list1">
                             <li>
                                 <i class="text-muted fas fa-acc-alt"></i>
@@ -560,7 +572,19 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <div class="h5" id="acc-btn2">신부측 계좌번호 확인하기</div>
+                        <div class="h5" id="acc-btn2">신부측 계좌번호</div>
+
+                        <table>
+<!--                            <tr>-->
+<!--                                <td>정덕구</td><td>경남은행</td><td>587-21-0093895</td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>라성숙</td><td>경남은행</td><td>578-22-0404169</td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>정세라</td><td>농협</td><td>866-12-431337</td>-->
+<!--                            </tr>-->
+                        </table>
                         <ul class="acc-ul" id="acc-list2">
                             <li>
                                 <i class="text-muted fas fa-acc-alt "></i>
@@ -625,9 +649,9 @@
     toggleMusic();
 </script>
 
-<script>
-    <!-- 계좌번호보이게 -->
 
+    <!-- 계좌번호보이게 -->
+<!--
     // document.addEventListener('DOMContentLoaded', function() {
     //     const accList1 = document.getElementById('acc-list1');
     //     const accList2 = document.getElementById('acc-list2');
@@ -660,26 +684,58 @@
     //     });
 
 
-        <!-- 계좌번호 복사 -->
-        document.addEventListener('DOMContentLoaded', function () {
-            const copyButtons = document.querySelectorAll('.copy');
+         계좌번호 복사 1
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const copyButtons = document.querySelectorAll('.copy');
+        //
+        //     copyButtons.forEach(button => {
+        //         button.addEventListener('click', function () {
+        //             const accNum = this.getAttribute('data-account');
+        //
+        //             navigator.clipboard.writeText(accNum).then(() => {
+        //                 button.textContent = '복사되었습니다!';
+        //                 alert("복사되었습니다.")
+        //                 setTimeout(() => {
+        //                     button.textContent = '복사하기';
+        //                 }, 2000);
+        //             }).catch(err => {
+        //                 console.error('Failed to copy:', err);
+        //             });
+        //         });
+        //     });
+        // });
+        //
+-->
 
-            copyButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const accNum = this.getAttribute('data-account');
 
+    <!-- 계좌복사 2 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const copyButtons = document.querySelectorAll('.copy');
+
+        copyButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const accNum = this.getAttribute('data-account');
+
+                if (navigator.clipboard) {
                     navigator.clipboard.writeText(accNum).then(() => {
                         button.textContent = '복사되었습니다!';
-                        alert("복사되었습니다.")
+                        button.setAttribute('aria-live', 'polite');
+                        alert("복사되었습니다.");
                         setTimeout(() => {
                             button.textContent = '복사하기';
                         }, 2000);
                     }).catch(err => {
                         console.error('Failed to copy:', err);
                     });
-                });
+                } else {
+                    console.warn('Clipboard API not supported');
+                    alert("복사를 지원하지 않는 브라우저입니다.");
+                }
             });
         });
+    });
+
 
 </script>
 
