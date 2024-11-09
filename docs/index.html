@@ -20,7 +20,7 @@
           rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-<!--    test preload -->
+    <!--    test preload -->
     <link rel="preload" href="images/main-background-new.jpg" as="image">
 
     <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
@@ -56,7 +56,8 @@
 
         }
 
-        @media (min-width: 768px){ /* 태블릿 이상 사이즈 사진 크기 키움*/
+        @media (min-width: 768px) {
+            /* 태블릿 이상 사이즈 사진 크기 키움*/
             .card img {
                 max-height: 300px;
             }
@@ -78,7 +79,6 @@
         #load-more:hover {
             background-color: #b36b00;
         }
-
 
 
         #acc-btn1, #acc-btn2 {
@@ -119,19 +119,20 @@
         .radio div:not(.selected) {
             background-color: #f9f9f9;
         }
+
         /* 선택된 상태 */
         .radio.dine div.selected {
             background-color: #4CAF50;
             color: white;
         }
 
-        .radio.grbr .blue.selected{
+        .radio.grbr .blue.selected {
             background-color: #346da8;
             color: white;
         }
 
 
-        .radio.grbr .red.selected{
+        .radio.grbr .red.selected {
             background-color: #bc6bb3;
             color: white;
         }
@@ -150,7 +151,7 @@
     </style>
     <!-- 갤러리 -->
     <style>
-        .gallery-container{
+        .gallery-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 8px;
@@ -160,17 +161,17 @@
 
     <style>
         .form-wrap {
-            max-height: 0;               /* 기본 높이 0 */
-            overflow: hidden;            /* 넘치는 내용 숨김 */
-            opacity: 0;                  /* 기본 투명하게 */
+            max-height: 0; /* 기본 높이 0 */
+            overflow: hidden; /* 넘치는 내용 숨김 */
+            opacity: 0; /* 기본 투명하게 */
             transition: max-height 0.5s ease, opacity 0.5s ease;
-            display: none;               /* 처음에는 표시되지 않음 */
+            display: none; /* 처음에는 표시되지 않음 */
         }
 
         .form-wrap.show {
-            display: block;              /* 보이게 설정 */
-            max-height: 500px;           /* 충분한 높이 (필요 시 조정) */
-            opacity: 1;                  /* 불투명하게 설정 */
+            display: block; /* 보이게 설정 */
+            max-height: 500px; /* 충분한 높이 (필요 시 조정) */
+            opacity: 1; /* 불투명하게 설정 */
         }
 
         .formShowBtn {
@@ -180,7 +181,7 @@
     </style>
 
     <style>
-        .acc-ul{
+        .acc-ul {
             list-style-type: none;
             list-style: none;
         }
@@ -191,16 +192,18 @@
 <body id="top">
 <header></header>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2"></script>
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2"></script>
 <div class="page-content">
     <div class="div">
 
-        <div class="ww-home-page" id="home" >
+        <div class="ww-home-page" id="home">
             <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
                 <div class="container ww-announcement-container"
-                style="position: relative; margin-top: -38vh;">
+                     style="position: relative; margin-top: -38vh;">
 
-                    <p class="ww-couple-name ww-title" style="font-size:1.6em; position:relative; margin-bottom: 0" >박영진 <span style="font-size:1.6em; font-family: sans-serif;">&</span> 정세라</p>
+                    <p class="ww-couple-name ww-title" style="font-size:1.6em; position:relative; margin-bottom: 0">박영진
+                        <span style="font-size:1.6em; font-family: sans-serif;">&</span> 정세라</p>
                     <p class="h2 ww-title"
                        style="font-family: 'Noto Serif KR', serif; font-size:1.6em; letter-spacing:-1px">
                         <b style="font-size:1.6em;">2024. 12. 14. SAT PM 12:00</b>
@@ -228,7 +231,7 @@ margin-top:40vh;">
                     <div class="collapse navbar-collapse text-uppercase" id="ww-navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item"><a class="nav-link smooth-scroll" href="#home">Home</a></li>
-<!--                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#couple">Couple</a></li>-->
+                            <!--                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#couple">Couple</a></li>-->
                             <li class="nav-item"><a class="nav-link smooth-scroll" href="#events">Events</a></li>
                             <li class="nav-item"><a class="nav-link smooth-scroll" href="#gallery">Gallery</a></li>
                         </ul>
@@ -240,31 +243,35 @@ margin-top:40vh;">
         <div class="ww-section bg-light" id="events">
             <div class="container ww-wedding-event align-items-center">
                 <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">초대합니다</h2>
-                    <div class="col text-center mb-5">
-                        <h6 style="font-family: 'Noto Serif KR', serif;">
-                            <br>
-                            <!-- 1144 삭제 -->
-<!--                            <div class="h4"></div>-->
-                            <ul>
+                <div class="col text-center mb-5">
+                    <h6 style="font-family: 'Noto Serif KR', serif;">
+                        <br>
+                        <!-- 1144 삭제 -->
+                        <!--                            <div class="h4"></div>-->
+                        <ul>
 
-                                <li>
-                                    <table style="margin: auto">
-                                        <tr>
-                                            <td><b>박광석</b> · <b>최천숙</b>&nbsp</td><td>의&nbsp</td>
-                                            <td><b>아들</b>&nbsp&nbsp</td><td>박영진</td>
-                                        </tr>
-                                        <tr>
-                                            <td><b>정덕구</b> · <b>라성숙</b>&nbsp</td><td>의&nbsp</td>
-                                            <td><b>딸</b>&nbsp&nbsp</td><td>정세라</td>
-                                        </tr>
-                                    </table>
-<!--                                    <span class="pl-3" >박광석 · 최천숙 의 아들 박영진</span><br>-->
-<!--                                    <span class="pl-3" >정덕구 · 라성숙 의 딸  정세라 </span>-->
-                                </li>
+                            <li>
+                                <table style="margin: auto">
+                                    <tr>
+                                        <td><b>박광석</b> · <b>최천숙</b>&nbsp</td>
+                                        <td>의&nbsp</td>
+                                        <td><b>아들</b>&nbsp&nbsp</td>
+                                        <td>박영진</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>정덕구</b> · <b>라성숙</b>&nbsp</td>
+                                        <td>의&nbsp</td>
+                                        <td><b>딸</b>&nbsp&nbsp</td>
+                                        <td>정세라</td>
+                                    </tr>
+                                </table>
+                                <!--                                    <span class="pl-3" >박광석 · 최천숙 의 아들 박영진</span><br>-->
+                                <!--                                    <span class="pl-3" >정덕구 · 라성숙 의 딸  정세라 </span>-->
+                            </li>
 
-                                <li></li>
+                            <li></li>
 
-                                <li class="pt-2">
+                            <li class="pt-2">
                                     <span class="pl-1 text-muted">
                                         두 사람이 만나<br>
                                         열두번의 계절을 지나왔습니다.<br>
@@ -275,10 +282,10 @@ margin-top:40vh;">
                                         둘이 하나가 되는 잔칫날<br>
                                         아낌없는 격려와 기도로<br>
                                         축복해주시면 감사하겠습니다.<br></span>
-                                </li>
-                            </ul>
-                        </h6>
-                    </div>
+                            </li>
+                        </ul>
+                    </h6>
+                </div>
                 <div class="row">
                     <div class="col-md-7 col-sm-12">
                         <div class="my-3">
@@ -332,137 +339,201 @@ margin-top:40vh;">
                     <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">포토 갤러리</h2>
 
                     <div class="ww-gallery">
-                        <div class="gallery-container" id="image-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; overflow: hidden">
+                        <div class="gallery-container" id="image-container"
+                             style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; overflow: hidden">
 
-                           <!-- 기존 사진 -->
+                            <!-- 기존 사진 -->
 
-<!--                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]">-->
-<!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
-<!--                                    <img alt="Gallery Pic 2" class="img-fluid" src="images/2JB00987-2.jpg"/> &lt;!&ndash; pic2 &ndash;&gt;-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="card" data-groups="[&quot;vacation&quot;]">-->
-<!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
-<!--                                    <img alt="Gallery Pic 3" class="img-fluid" src="images/2JB02221-1.jpg"/> &lt;!&ndash; pic3 &ndash;&gt;-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="card" data-groups="[&quot;party&quot;,&quot;vacation&quot;]">-->
-<!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
-<!--                                    <img alt="Gallery Pic 4" class="img-fluid" src="images/2JB02133-1.jpg"/> &lt;!&ndash; pic4 &ndash;&gt;-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="card" data-groups="[&quot;vacation&quot;]">-->
-<!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
-<!--                                    <img alt="Gallery Pic 5" class="img-fluid" src="images/2JB00212-2.jpg"/> &lt;!&ndash; pic6 &ndash;&gt;-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="card"-->
-<!--                                 data-groups="[&quot;wedding&quot;,&quot;ceremony&quot;,&quot;party&quot;]">-->
-<!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
-<!--                                    <img alt="Gallery Pic 6" class="img-fluid" src="images/2JB01927-2.jpg"/> &lt;!&ndash; pic7 &ndash;&gt;-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="card" data-groups="[&quot;vacation&quot;]">-->
-<!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
-<!--                                    <img alt="Gallery Pic 7" class="img-fluid" src="images/1445-1.webp"/> &lt;!&ndash; pic5 &ndash;&gt;-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="card" data-groups="[&quot;vacation&quot;]">-->
-<!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
-<!--                                    <img alt="Gallery Pic 8" class="img-fluid" src="images/2JB00537-2.jpg"/> &lt;!&ndash; new add &ndash;&gt;-->
-<!--                                </a>-->
-<!--                            </div>-->
+                            <!--                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]">-->
+                            <!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
+                            <!--                                    <img alt="Gallery Pic 2" class="img-fluid" src="images/2JB00987-2.jpg"/> &lt;!&ndash; pic2 &ndash;&gt;-->
+                            <!--                                </a>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="card" data-groups="[&quot;vacation&quot;]">-->
+                            <!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
+                            <!--                                    <img alt="Gallery Pic 3" class="img-fluid" src="images/2JB02221-1.jpg"/> &lt;!&ndash; pic3 &ndash;&gt;-->
+                            <!--                                </a>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="card" data-groups="[&quot;party&quot;,&quot;vacation&quot;]">-->
+                            <!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
+                            <!--                                    <img alt="Gallery Pic 4" class="img-fluid" src="images/2JB02133-1.jpg"/> &lt;!&ndash; pic4 &ndash;&gt;-->
+                            <!--                                </a>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="card" data-groups="[&quot;vacation&quot;]">-->
+                            <!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
+                            <!--                                    <img alt="Gallery Pic 5" class="img-fluid" src="images/2JB00212-2.jpg"/> &lt;!&ndash; pic6 &ndash;&gt;-->
+                            <!--                                </a>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="card"-->
+                            <!--                                 data-groups="[&quot;wedding&quot;,&quot;ceremony&quot;,&quot;party&quot;]">-->
+                            <!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
+                            <!--                                    <img alt="Gallery Pic 6" class="img-fluid" src="images/2JB01927-2.jpg"/> &lt;!&ndash; pic7 &ndash;&gt;-->
+                            <!--                                </a>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="card" data-groups="[&quot;vacation&quot;]">-->
+                            <!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
+                            <!--                                    <img alt="Gallery Pic 7" class="img-fluid" src="images/1445-1.webp"/> &lt;!&ndash; pic5 &ndash;&gt;-->
+                            <!--                                </a>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="card" data-groups="[&quot;vacation&quot;]">-->
+                            <!--                                <a data-gallery="ww-gallery" data-toggle="lightbox">-->
+                            <!--                                    <img alt="Gallery Pic 8" class="img-fluid" src="images/2JB00537-2.jpg"/> &lt;!&ndash; new add &ndash;&gt;-->
+                            <!--                                </a>-->
+                            <!--                            </div>-->
 
-<!--                             임시 -->
-<!--                            &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                            <!--                             임시 -->
+                            <!--                            &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
-<div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-    <img alt="Gallery Pic 2" class="img-fluid" src="images/new/01.jpg"/></a></div>
+                            <!--<div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">-->
+                            <!--    <img alt="Gallery Pic 2" class="img-fluid" src="images/new/01.jpg"/></a></div>-->
 
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
                                 <img alt="Gallery Pic 2" class="img-fluid" src="images/new/00.jpg"/></a></div>
 
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
                                 <img alt="Gallery Pic 2" class="img-fluid" src="images/new/01.jpg"/></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
                                 <img alt="Gallery Pic 2" class="img-fluid" src="images/new/02.jpg"/></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
                                 <img alt="Gallery Pic 2" class="img-fluid" src="images/new/03.jpg"/></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
                                 <img alt="Gallery Pic 2" class="img-fluid" src="images/new/04.jpg"/></a></div>
 
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
                                 <img alt="Gallery Pic 2" class="img-fluid" src="images/new/05.jpg"/></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
                                 <img alt="Gallery Pic 2" class="img-fluid" src="images/new/06.jpg"/></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
                                 <img alt="Gallery Pic 2" class="img-fluid" src="images/new/07.jpg"/></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
                                 <img alt="Gallery Pic 2" class="img-fluid" src="images/new/08.jpg"/></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/09.jpg" loading="lazy" /></a></div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/09.jpg" loading="lazy"/></a>
+                            </div>
 
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/010.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/011.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/012.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/013.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/014.jpg" loading="lazy" /></a></div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/010.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/011.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/012.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/013.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/014.jpg" loading="lazy"/></a>
+                            </div>
 
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/015.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/016.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/017.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/018.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/019.jpg" loading="lazy" /></a></div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/015.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/016.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/017.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/018.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/019.jpg" loading="lazy"/></a>
+                            </div>
 
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/020.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/021.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/022.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/023.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/024.jpg" loading="lazy" /></a></div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/020.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/021.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/022.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/023.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/024.jpg" loading="lazy"/></a>
+                            </div>
 
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/025.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/026.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/027.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/028.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/029.jpg" loading="lazy" /></a></div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/025.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/026.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/027.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/028.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/029.jpg" loading="lazy"/></a>
+                            </div>
 
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/030.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/031.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/032.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/033.jpg" loading="lazy" /></a></div>
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/034.jpg" loading="lazy" /></a></div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/030.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/031.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/032.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/033.jpg" loading="lazy"/></a>
+                            </div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/034.jpg" loading="lazy"/></a>
+                            </div>
 
-                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/035.jpg" loading="lazy" /></a></div>
+                            <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
+                                    data-gallery="ww-gallery" data-toggle="lightbox">
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/035.jpg" loading="lazy"/></a>
+                            </div>
 
 
                         </div>
-<!--                        <button id="load-more">+</button>-->
+                        <!--                        <button id="load-more">+</button>-->
 
                     </div>
                 </div>
@@ -473,87 +544,100 @@ margin-top:40vh;">
             <div class="ww-photo-gallery">
                 <div class="container">
                     <div class="col text-center">
-                        <h2 class="h4 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">참석 여부를 알려주세요</h2><br>
+                        <h2 class="h4 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">참석 여부를
+                            알려주세요</h2><br>
                         <div id="comments">
                             <div>
                                 <h6 style="font-family: 'Noto Serif KR', serif;">참석의 부담은 가지지 마시고,</h6>
-                                <h6 style="font-family: 'Noto Serif KR', serif;">정성껏 준비하기 위함이니 <br>알려 주시면 감사하겠습니다.</h6> <br><br>
-                                    <div id="formShowBtn" class="formShowBtn" style="text-decoration: underline; text-underline: darkblue">📝입력하기</div>
+                                <h6 style="font-family: 'Noto Serif KR', serif;">정성껏 준비하기 위함이니 <br>알려 주시면 감사하겠습니다.</h6>
+                                <br><br>
+                                <div id="formShowBtn" class="formShowBtn"
+                                     style="text-decoration: underline; text-underline: darkblue">📝입력하기
+                                </div>
                             </div>
                         </div>
                         <br>
                         <div class="row form-wrap" id="form-wrap" style="margin: auto; align-content: center">
-                            <form style="margin: auto" action="https://script.google.com/macros/s/AKfycbxbf12k5d-wD_XNSNrq6cb8JOVMqfFH3od4tcpua4Spyxr2UeCdVUFpw7RcQ4EUO92N/exec"
+                            <form style="margin: auto"
+                                  action="https://script.google.com/macros/s/AKfycbxbf12k5d-wD_XNSNrq6cb8JOVMqfFH3od4tcpua4Spyxr2UeCdVUFpw7RcQ4EUO92N/exec"
                                   method="POST" target="hidden_iframe">
-                            <table style="margin: auto">
-                                <colgroup>
-                                    <col style="width: 80px">
-                                    <col>
-                                </colgroup>
-                                <tbody>
+                                <table style="margin: auto">
+                                    <colgroup>
+                                        <col style="width: 80px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
 
-                                <tr>
-                                    <th>구분</th>
-                                    <td>
-                                        <div class="radio grbr">
-                                            <div onclick="selectOption2(this)" class="blue">
-                                                <input type="radio" id="rsvp-side-gr" value="groom" name="rsvp-side" checked="checked">
-                                                <label for="rsvp-side-gr" class="blue-fill">신랑측</label>
+                                    <tr>
+                                        <th>구분</th>
+                                        <td>
+                                            <div class="radio grbr">
+                                                <div onclick="selectOption2(this)" class="blue">
+                                                    <input type="radio" id="rsvp-side-gr" value="groom" name="rsvp-side"
+                                                           checked="checked">
+                                                    <label for="rsvp-side-gr" class="blue-fill">신랑측</label>
+                                                </div>
+                                                <div onclick="selectOption2(this)" class="red">
+                                                    <input type="radio" id="rsvp-side-br" value="bride"
+                                                           name="rsvp-side">
+                                                    <label for="rsvp-side-br" class="red-fill">신부측</label>
+                                                </div>
                                             </div>
-                                            <div onclick="selectOption2(this)" class="red">
-                                                <input type="radio" id="rsvp-side-br" value="bride" name="rsvp-side">
-                                                <label for="rsvp-side-br" class="red-fill">신부측</label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>성함</th>
-                                    <td><input name="rsvp-attend-name" type="text" maxlength="12" placeholder="홍길동"></td>
-                                </tr>
-                                <tr>
-                                    <th>연락처</th>
-                                    <td><input name="rsvp-attend-contact" type="text" maxlength="20" placeholder="010-1234-5678"></td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>성함</th>
+                                        <td><input name="rsvp-attend-name" type="text" maxlength="12" placeholder="홍길동">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>연락처</th>
+                                        <td><input name="rsvp-attend-contact" type="text" maxlength="20"
+                                                   placeholder="010-1234-5678"></td>
 
-                                </tr>
-                                <tr>
-                                    <th>참석인원<!----></th>
-                                    <td><input name="rsvp-attend-number" type="number"  placeholder="1" min="1" max="100" pattern="[0-9]*">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>식사여부</th>
-                                    <td>
-                                        <div class="radio dine">
-                                            <div onclick="selectOption(this)">
-                                                <input type="radio" id="rsvp-attend-yes" checked="checked" name="rsvp-attend" value="true">
-                                                <label for="rsvp-attend-yes" class="black">예정</label>
+                                    </tr>
+                                    <tr>
+                                        <th>참석인원<!----></th>
+                                        <td><input name="rsvp-attend-number" type="number" placeholder="1" min="1"
+                                                   max="100" pattern="[0-9]*">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>식사여부</th>
+                                        <td>
+                                            <div class="radio dine">
+                                                <div onclick="selectOption(this)">
+                                                    <input type="radio" id="rsvp-attend-yes" checked="checked"
+                                                           name="rsvp-attend" value="true">
+                                                    <label for="rsvp-attend-yes" class="black">예정</label>
+                                                </div>
+                                                <div onclick="selectOption(this)">
+                                                    <input type="radio" id="rsvp-attend-no" name="rsvp-attend"
+                                                           value="false">
+                                                    <label for="rsvp-attend-no" class="black">안함</label>
+                                                </div>
+                                                <div onclick="selectOption(this)">
+                                                    <input type="radio" id="rsvp-attend-undef" name="rsvp-attend"
+                                                           value="undef">
+                                                    <label for="rsvp-attend-undef" class="black">미정</label>
+                                                </div>
                                             </div>
-                                            <div onclick="selectOption(this)">
-                                                <input type="radio" id="rsvp-attend-no" name="rsvp-attend" value="false">
-                                                <label for="rsvp-attend-no" class="black">안함</label>
-                                            </div>
-                                            <div onclick="selectOption(this)">
-                                                <input type="radio" id="rsvp-attend-undef" name="rsvp-attend" value="undef">
-                                                <label for="rsvp-attend-undef" class="black">미정</label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <div class="greet-msg">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <div class="greet-msg">
                                             <textarea style="width: 80%" rows="5" id="message" name="message"
                                                       placeholder="참석인원은 본인 포함 숫자로 입력해 주시고, 이곳에 간단한 축하 메시지를 남겨주세요"></textarea>
-                                        </div>
-                                    </td>
+                                            </div>
+                                        </td>
 
-                                </tr>
+                                    </tr>
 
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
 
-                            <div style="display: none" class="col text-center">
+                                <div style="display: none" class="col text-center">
 
                                     <label for="name">성함</label>
                                     <input type="text" id="name" name="name" placeholder="홍길동"><br><br>
@@ -563,12 +647,13 @@ margin-top:40vh;">
 
                                     <label for="message"></label>
 
-                                    <textarea rows="5" id="message_old" name="message" placeholder="참석 및 불참, 참석인원이나 간단한 축하 메시지를 남겨주세요"></textarea>
+                                    <textarea rows="5" id="message_old" name="message"
+                                              placeholder="참석 및 불참, 참석인원이나 간단한 축하 메시지를 남겨주세요"></textarea>
                                     <br>
 
-<!--                                    <button class="btn btn-primary btn-submit" id="submitBtn" type="submit">보내기</button>-->
-<!--                                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>-->
-                            </div>
+                                    <!--                                    <button class="btn btn-primary btn-submit" id="submitBtn" type="submit">보내기</button>-->
+                                    <!--                                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>-->
+                                </div>
                                 <button class="btn btn-primary btn-submit" id="submitBtn" type="submit">보내기</button>
 
                             </form>
@@ -579,7 +664,6 @@ margin-top:40vh;">
                 </div>
             </div>
         </div>
-
 
 
         <div class="ww-section ww-rsvp-detail" id="map">
@@ -606,11 +690,11 @@ margin-top:40vh;">
                                 <span style="color: black">카카오맵</span>
 
                             </a>
-<!--                            <a href="https://maps.app.goo.gl/2HHaKm9fmJufRX799">-->
-<!--                                <img alt="google-map" class="map-icon" id="google-map"-->
-<!--                                     src="images/map/google-map.png"/>-->
-<!--                                <span>구글 지도</span>-->
-<!--                            </a>-->
+                            <!--                            <a href="https://maps.app.goo.gl/2HHaKm9fmJufRX799">-->
+                            <!--                                <img alt="google-map" class="map-icon" id="google-map"-->
+                            <!--                                     src="images/map/google-map.png"/>-->
+                            <!--                                <span>구글 지도</span>-->
+                            <!--                            </a>-->
                         </div>
                         <div class="col text-center">
                             <label style="font-family: 'Noto Serif KR', serif; font-size: 12px;">
@@ -618,14 +702,16 @@ margin-top:40vh;">
                             </label>
                         </div>
                         <div class="my-3" style="align-content: center">
-                            <div style="width: 100%" id="daumRoughmapContainer1729003001465" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-                            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                            <div style="width: 100%" id="daumRoughmapContainer1729003001465"
+                                 class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                            <script charset="UTF-8" class="daum_roughmap_loader_script"
+                                    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
                             <script charset="UTF-8">
                                 new daum.roughmap.Lander({
-                                    "timestamp" : "1729003001465",
-                                    "key" : "2kwhf",
-                                    "mapWidth" : "60%",
-                                    "mapHeight" : "auto"
+                                    "timestamp": "1729003001465",
+                                    "key": "2kwhf",
+                                    "mapWidth": "60%",
+                                    "mapHeight": "auto"
                                 }).render();
                             </script>
                         </div>
@@ -663,7 +749,7 @@ margin-top:40vh;">
                             <li>
                                 <i class="text-muted far fa-acc-alt3"></i>
                                 <span class="pl-2 text-muted">박영진 카카오뱅크 3333-05-3078634</span>
-                               <button class="copy" data-account="3333053078634">복사하기</button>
+                                <button class="copy" data-account="3333053078634">복사하기</button>
                             </li>
                         </ul>
                     </div>
@@ -674,7 +760,8 @@ margin-top:40vh;">
                         <ul class="acc-ul" id="acc-list2">
                             <li>
                                 <i class="text-muted fas fa-acc-alt "></i>
-                                <span class="pl-2 text-muted copy" data-account="587210093895">정덕구 경남은행 587-21-0093895</span>
+                                <span class="pl-2 text-muted copy"
+                                      data-account="587210093895">정덕구 경남은행 587-21-0093895</span>
                                 <button class="copy" data-account="587210093895">복사하기</button>
                             </li>
                             <li>
@@ -693,8 +780,6 @@ margin-top:40vh;">
                 </div>
             </div>
         </div>
-
-
 
 
     </div>
@@ -719,82 +804,24 @@ margin-top:40vh;">
 </div>
 
 <script> // 음악 재생 / 중지 토글
-    let isPlaying = false;
+let isPlaying = false;
 
-    function toggleMusic() {
-        const player = document.getElementById('player');
+function toggleMusic() {
+    const player = document.getElementById('player');
 
-        if (isPlaying) {
-            player.pause();
-        } else {
-            player.play();
-        }
-
-        isPlaying = !isPlaying;
+    if (isPlaying) {
+        player.pause();
+    } else {
+        player.play();
     }
-    toggleMusic();
+
+    isPlaying = !isPlaying;
+}
+
+toggleMusic();
 </script>
 
-
-    <!-- 계좌번호보이게 -->
-<!--
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     const accList1 = document.getElementById('acc-list1');
-    //     const accList2 = document.getElementById('acc-list2');
-    //
-    //     const toggleHeader1 = document.getElementById('acc-btn1');
-    //     const toggleHeader2 = document.getElementById('acc-btn2');
-    //
-    //
-    //     toggleHeader1.addEventListener('click', function () {
-    //         if (accList1.style.display === 'none' || accList1.style.display === '') {
-    //             accList1.style.display = 'none'; // Show the account numbers
-    //         } else {
-    //             accList1.style.display = 'block'; // Hide the account numbers
-    //         }
-    //     });
-    //     toggleHeader2.addEventListener('click', function () {
-    //         if (accList2.style.display === 'none' || accList2.style.display === '') {
-    //             accList2.style.display = 'block'; // Show the account numbers
-    //
-    //         } else {
-    //             accList2.style.display = 'none'; // Hide the account numbers
-    //         }
-    //         // });
-    //
-    //         // toggleHeader1.addEventListener('click', function (){
-    //         //     accList1.classList.toggle('show');
-    //         // });
-    //
-    //
-    //     });
-
-
-         계좌번호 복사 1
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     const copyButtons = document.querySelectorAll('.copy');
-        //
-        //     copyButtons.forEach(button => {
-        //         button.addEventListener('click', function () {
-        //             const accNum = this.getAttribute('data-account');
-        //
-        //             navigator.clipboard.writeText(accNum).then(() => {
-        //                 button.textContent = '복사되었습니다!';
-        //                 alert("복사되었습니다.")
-        //                 setTimeout(() => {
-        //                     button.textContent = '복사하기';
-        //                 }, 2000);
-        //             }).catch(err => {
-        //                 console.error('Failed to copy:', err);
-        //             });
-        //         });
-        //     });
-        // });
-        //
--->
-
-
-    <!-- 계좌복사 2 -->
+<!-- 계좌복사 2 -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const copyButtons = document.querySelectorAll('.copy');
@@ -828,7 +855,7 @@ margin-top:40vh;">
 
 <!-- form 보이게 -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const formdiv = document.getElementById('form-wrap');
         const formShowButton = document.getElementById('formShowBtn');
 
@@ -840,104 +867,58 @@ margin-top:40vh;">
 
 
 <script> <!-- form 전송 처리 -->
-    const form = document.querySelector('form');
-    const iframe = document.getElementById('hidden_iframe');
-    const submitBtn = document.getElementById('submitBtn');
+const form = document.querySelector('form');
+const iframe = document.getElementById('hidden_iframe');
+const submitBtn = document.getElementById('submitBtn');
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        form.submit();
-        submitBtn.textContent = '보냈습니다!';
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    form.submit();
+    submitBtn.textContent = '보냈습니다!';
 
-        alert("감사합니다 :)")
+    alert("감사합니다 :)")
 
-        setTimeout(() => {
-            submitBtn.textContent = '다시보내기';
-        }, 5000);
-    });
+    setTimeout(() => {
+        submitBtn.textContent = '다시보내기';
+    }, 5000);
+});
 </script>
 
 <!-- 라디오버튼 -->
 <!-- 신랑측신부측 -->
 <script>
-function selectOption2(selectedDiv) {
-    // 모든 옵션의 선택 해제
-    const options2 = document.querySelectorAll('.radio.grbr div');
-    options2.forEach(option2 => option2.classList.remove('selected'));
+    function selectOption2(selectedDiv) {
+        // 모든 옵션의 선택 해제
+        const options2 = document.querySelectorAll('.radio.grbr div');
+        options2.forEach(option2 => option2.classList.remove('selected'));
 
-    // 클릭한 옵션 선택 상태로 설정
-    selectedDiv.classList.add('selected');
+        // 클릭한 옵션 선택 상태로 설정
+        selectedDiv.classList.add('selected');
 
-    // 내부의 라디오 버튼 선택
-    selectedDiv.querySelector('input[type="radio"]').checked = true;
-}
-<!-- 식사여부 -->
+        // 내부의 라디오 버튼 선택
+        selectedDiv.querySelector('input[type="radio"]').checked = true;
+    }
+
+    <!-- 식사여부 -->
     function selectOption(selectedDiv) {
-    // 모든 옵션의 선택 해제
-    const options = document.querySelectorAll('.radio.dine div');
-    options.forEach(option => option.classList.remove('selected'));
+        // 모든 옵션의 선택 해제
+        const options = document.querySelectorAll('.radio.dine div');
+        options.forEach(option => option.classList.remove('selected'));
 
-    // 클릭한 옵션 선택 상태로 설정
-    selectedDiv.classList.add('selected');
+        // 클릭한 옵션 선택 상태로 설정
+        selectedDiv.classList.add('selected');
 
-    // 내부의 라디오 버튼 선택
-    selectedDiv.querySelector('input[type="radio"]').checked = true;
-}
+        // 내부의 라디오 버튼 선택
+        selectedDiv.querySelector('input[type="radio"]').checked = true;
+    }
 </script>
 
 
 <!--사진 갤러리 관련 스크립트-->
-<!-- 사진 추가 로드 한번에 로드하니까 주석처리 11/1-->
-<script>
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const container = document.getElementById('image-container');
-//     const loadMoreBtn = document.getElementById('load-more');
-//     const cards = container.getElementsByClassName('card');
-//     const cardsToShow = 3; // Number of cards to show initially and each load
-//     let currentIndex = 0;
-//
-//     function showCards(startIndex, endIndex) {
-//         for (let i = startIndex; i < endIndex && i < cards.length; i++) {
-//             cards[i].style.display = 'block';
-//         }
-//     }
-//
-//     function hideAllCards() {
-//         for (let card of cards) {
-//             card.style.display = 'none';
-//         }
-//     }
-//
-//     // Initially hide all cards
-//     hideAllCards();
-//
-//     // Show the first set of cards
-//     showCards(0, cardsToShow);
-//     currentIndex = cardsToShow;
-//
-//     loadMoreBtn.addEventListener('click', function() {
-//         showCards(currentIndex, currentIndex + cardsToShow);
-//         currentIndex += cardsToShow;
-//
-//         // Hide the button if all cards are shown
-//         if (currentIndex >= cards.length) {
-//             loadMoreBtn.style.display = 'none';
-//         }
-//     });
-// });
-</script>
 
 <script> <!-- 사진 크게 확인 -->
-// todo 작업필요
 
 
 </script>
 </body>
 </html>
-
-
-
-
-
-
