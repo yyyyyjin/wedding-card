@@ -21,13 +21,25 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!--    test preload -->
-    <link rel="preload" href="images/main.jpg" as="image">
+<!--    <link rel="preload" href="images/main.jpg" as="image">-->
 
 
     <!-- 구버전 주석처리 -->
     <!--    <script src="https://code.jquery.com/jquery-2.2.1.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js" type="text/javascript"></script>
 
+
+    <!-- main image 속도를 위해 여기 옮김 -->
+    <style>
+        /* Home Page Style */
+    .ww-home-page {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("images/main.jpg") no-repeat center center;
+        background-size: cover;
+        background-position: 50%;
+        height: 100vh;
+        min-height: 480px;
+    }
+    </style>
 
     <!-- load more CSS style -->
     <style>
@@ -239,6 +251,8 @@
             margin-left: 0px;
             padding-left: 0px;
         }
+
+
     </style>
 
 </head>
@@ -542,6 +556,7 @@ margin-top:40vh;">
 
 
                         </div>
+
                         <!--                        <button id="load-more">+</button>-->
 
                     </div>
@@ -738,20 +753,20 @@ margin-top:40vh;">
 
                         <ul class="acc-ul" id="acc-list1">
                             <li>
-                                <i class="text-muted far fa-acc-alt2"></i>
-                                <span class="pl-2 text-muted">박광석 부산은행 277-12-021190-6 (박영진)</span>
+<!--                                <i class="text-muted far fa-acc-alt2"></i>-->
+                                <span class="text-muted">박광석 부산은행 277-12-021190-6 (박영진)</span>
                                 <button class="copy" data-account="277120211906">복사하기</button>
                             </li>
 
                             <li>
-                                <i class="text-muted far fa-acc-alt2"></i>
-                                <span class="pl-2 text-muted">최천숙 부산은행 277-12-000089-3 </span>
+<!--                                <i class="text-muted far fa-acc-alt2"></i>-->
+                                <span class="text-muted">최천숙 부산은행 277-12-000089-3 </span>
                                 <button class="copy" data-account="277120000893">복사하기</button>
                             </li>
 
                             <li>
-                                <i class="text-muted far fa-acc-alt3"></i>
-                                <span class="pl-2 text-muted">박영진 카카오뱅크 3333-05-3078634</span>
+<!--                                <i class="text-muted far fa-acc-alt3"></i>-->
+                                <span class="text-muted">박영진 카카오뱅크 3333-05-3078634</span>
                                 <button class="copy" data-account="3333053078634">복사하기</button>
                             </li>
                         </ul>
