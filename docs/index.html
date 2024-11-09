@@ -188,14 +188,25 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.7);
             justify-content: center;
             align-items: center;
         }
         .modal img {
             max-width: 90%;
-            max-height: 90%;
+            max-height: 80%;
         }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            color: black;
+            font-size: 2rem;
+            padding: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .prev {left:10px;}
+        .next {right: 10px;}
 
     </style>
 
@@ -387,147 +398,146 @@ margin-top:40vh;">
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
                                 <img alt="Gallery Pic 0" class="img-fluid" src="images/new/00.jpg"
-                                onclick="openModal(this.src)"/></a></div>
+                                     onclick="openModal(this.src)"/></a></div>
 
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 1" class="img-fluid" src="images/new/01.jpg"/></a></div>
+                                <img alt="Gallery Pic 1" class="img-fluid" src="images/new/01.jpg" onclick="openModal(this.src)" /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/02.jpg"/></a></div>
+                                <img alt="Gallery Pic 2" class="img-fluid" src="images/new/02.jpg"  onclick="openModal(this.src)" /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 3" class="img-fluid" src="images/new/03.jpg"/></a></div>
+                                <img alt="Gallery Pic 3" class="img-fluid" src="images/new/03.jpg" onclick="openModal(this.src)" /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 4" class="img-fluid" src="images/new/04.jpg"/></a></div>
+                                <img alt="Gallery Pic 4" class="img-fluid" src="images/new/04.jpg" onclick="openModal(this.src)" /></a></div>
 
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 5" class="img-fluid" src="images/new/05.jpg"/></a></div>
+                                <img alt="Gallery Pic 5" class="img-fluid" src="images/new/05.jpg" onclick="openModal(this.src)" /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 6" class="img-fluid" src="images/new/06.jpg"/></a></div>
+                                <img alt="Gallery Pic 6" class="img-fluid" src="images/new/06.jpg" onclick="openModal(this.src)" /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 7" class="img-fluid" src="images/new/07.jpg"/></a></div>
+                                <img alt="Gallery Pic 7" class="img-fluid" src="images/new/07.jpg" onclick="openModal(this.src)" /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 8" class="img-fluid" src="images/new/08.jpg"/></a></div>
+                                <img alt="Gallery Pic 8" class="img-fluid" src="images/new/08.jpg" onclick="openModal(this.src)" /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 9" class="img-fluid" src="images/new/09.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 9" class="img-fluid" src="images/new/09.jpg" onclick="openModal(this.src)" loading="lazy"  /></a></div>
 
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 10" class="img-fluid" src="images/new/010.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 10" class="img-fluid" src="images/new/010.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 11" class="img-fluid" src="images/new/011.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 11" class="img-fluid" src="images/new/011.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 12" class="img-fluid" src="images/new/012.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 12" class="img-fluid" src="images/new/012.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 13" class="img-fluid" src="images/new/013.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 13" class="img-fluid" src="images/new/013.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 14" class="img-fluid" src="images/new/014.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 14" class="img-fluid" src="images/new/014.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
 
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 15" class="img-fluid" src="images/new/015.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 15" class="img-fluid" src="images/new/015.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 16" class="img-fluid" src="images/new/016.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 16" class="img-fluid" src="images/new/016.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 17" class="img-fluid" src="images/new/017.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 17" class="img-fluid" src="images/new/017.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 18" class="img-fluid" src="images/new/018.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 18" class="img-fluid" src="images/new/018.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 19" class="img-fluid" src="images/new/019.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 19" class="img-fluid" src="images/new/019.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
 
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 20" class="img-fluid" src="images/new/020.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 20" class="img-fluid" src="images/new/020.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 21" class="img-fluid" src="images/new/021.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 21" class="img-fluid" src="images/new/021.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 22" class="img-fluid" src="images/new/022.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 22" class="img-fluid" src="images/new/022.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 23" class="img-fluid" src="images/new/023.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 23" class="img-fluid" src="images/new/023.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 24" class="img-fluid" src="images/new/024.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 24" class="img-fluid" src="images/new/024.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
 
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 25" class="img-fluid" src="images/new/025.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 25" class="img-fluid" src="images/new/025.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 26" class="img-fluid" src="images/new/026.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 26" class="img-fluid" src="images/new/026.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 27" class="img-fluid" src="images/new/027.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 27" class="img-fluid" src="images/new/027.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 28" class="img-fluid" src="images/new/028.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 28" class="img-fluid" src="images/new/028.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 29" class="img-fluid" src="images/new/029.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 29" class="img-fluid" src="images/new/029.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
 
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 30" class="img-fluid" src="images/new/030.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 30" class="img-fluid" src="images/new/030.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 31" class="img-fluid" src="images/new/031.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 31" class="img-fluid" src="images/new/031.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 32" class="img-fluid" src="images/new/032.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 32" class="img-fluid" src="images/new/032.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 33" class="img-fluid" src="images/new/033.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 33" class="img-fluid" src="images/new/033.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 34" class="img-fluid" src="images/new/034.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 34" class="img-fluid" src="images/new/034.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
 
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]"><a
                                     data-gallery="ww-gallery" data-toggle="lightbox">
-                                <img alt="Gallery Pic 35" class="img-fluid" src="images/new/035.jpg" loading="lazy"/></a>
-                            </div>
+                                <img alt="Gallery Pic 35" class="img-fluid" src="images/new/035.jpg"
+                                     onclick="openModal(this.src)" loading="lazy"  /></a></div>
 
 
                         </div>
@@ -907,27 +917,27 @@ form.addEventListener('submit', (event) => {
 
 <!--사진 갤러리 관련 스크립트-->
 
-<script> <!-- 사진 크게 확인 -->
-
-
-</script>
-
 <!-- 사진 모달 관련 -->
 
 
-<!--<div class="gallery">-->
-<!--    <p>test gall for modal</p>-->
-<!--    <img style="width: 300px" src="images/main.jpg" alt="이미지 1" onclick="openModal(this.src)">-->
-<!--    <img src="image2.jpg" alt="이미지 2" onclick="openModal(this.src)">-->
-<!--    <img src="image3.jpg" alt="이미지 3" onclick="openModal(this.src)">-->
-<!--    &lt;!&ndash; 추가 이미지 &ndash;&gt;-->
-<!--</div>-->
-
 <div class="modal" id="modal" onclick="closeModal()">
+    <span class="prev" onclick="prevImage(event)">&lt;</span>
     <img id="modalImage" src="" alt="확대된 이미지">
+    <span class="next" onclick="nextImage(event)">&gt;</span>
 </div>
 
 <script>
+    const basePath = "images/new/";
+    const imageGallery = [
+        "00.jpg", "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg",
+        "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg",
+        "20.jpg", "21.jpg", "22.jpg", "23.jpg", "24.jpg", "25.jpg", "26.jpg", "27.jpg", "28.jpg", "29.jpg",
+        "30.jpg", "31.jpg", "32.jpg", "33.jpg", "34.jpg", "35.jpg"
+    ].map(filename => `${basePath}${filename}`);
+
+    let currentIndex = 0;
+
+
     function openModal(src) {
         const modal = document.getElementById('modal');
         const modalImage = document.getElementById('modalImage');
@@ -939,6 +949,32 @@ form.addEventListener('submit', (event) => {
         const modal = document.getElementById('modal');
         modal.style.display = 'none';
     }
+
+    // next 와 prev 구현
+
+    function nextImage(e){
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1 + imageGallery.length) % imageGallery.length;
+        document.getElementById('modalImage').src = imageGallery[currentIndex]
+
+    }
+
+    function prevImage(e){
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + imageGallery.length) % imageGallery.length;
+        document.getElementById('modalImage').src = imageGallery[currentIndex]
+
+    }
+
+    function preloadImages() {
+        imageGallery.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    }
+
+    preloadImages();
+
 </script>
 
 
