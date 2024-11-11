@@ -51,9 +51,12 @@
     <!-- load more CSS style -->
     <style>
 
+        table, table * {
+            border: dotted 1px #8f3da7;
+        }
 
         * {
-            /*border: dotted 1px #8f3da7; for debug */
+            /*border: dotted 1px #8f3da7;*/
             font-family: 'SejongGeulggot', serif;
         }
 
@@ -678,13 +681,15 @@ margin-top:55vh;">
                                     </tbody>
                                 </table>
 
-                                <div style="display: none" class="col text-center">
+                                <div style="display: none; max-width: 95%;" class="col text-center">
 
                                     <label for="name">성함</label>
-                                    <input type="text" id="name" name="name" placeholder="홍길동" size="10"><br><br>
+                                    <input type="text" id="name" name="name" placeholder="홍길동" size="8">
+                                    <br><br>
 
                                     <label for="contact">연락처</label>
-                                    <input type="text" id="contact" name="contact" placeholder="010-1234-5678" size="10"><br><br>
+                                    <input type="text" id="contact" name="contact" placeholder="010-1234-5678" size="8">
+                                    <br><br>
 
                                     <label for="message"></label>
 
