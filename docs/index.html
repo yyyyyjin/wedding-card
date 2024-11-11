@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-    <meta content="박영진과 정세라의 결혼식에 와서 축하해주세요~!" name="description"/>
+    <meta content="박영진과 정세라의 결혼식 모바일 청첩장입니다." name="description"/>
     <meta property="og:image" content="images/preview.jpg"> <!-- 미리보기 이미지 -->
 
 
@@ -53,8 +53,8 @@
 
 
         * {
-            border: dot-dash 1px #8f3da7;
-            font-family: 'Noto Serif KR', serif;
+            border: dotted 1px #8f3da7;
+            font-family: 'SejongGeulggot', serif;
         }
 
 
@@ -63,7 +63,6 @@
             /*display: none; !* Initially hide all cards *!*/
             overflow: hidden;
         }
-
 
         .card img {
             max-width: 100%;
@@ -74,7 +73,6 @@
             object-fit: cover; /* 이미지가 고정된 크기에 맞도록 조정 */
             border-radius: 4px;
             cursor: pointer;
-
         }
 
         @media (min-width: 768px) {
@@ -166,6 +164,18 @@
         }
 
 
+    </style>
+    <!-- 한글 폰트 적용 -->
+    <style>
+        @font-face {
+            font-family: 'SejongGeulggot.ttf';
+            font-style: normal;
+            src : url("styles/SejongGeulggot.ttf");
+
+        }
+        body {
+            font-family: 'SejongGeulggot', serif;
+        }
     </style>
     <!-- 갤러리 -->
     <style>
@@ -260,8 +270,6 @@
             padding-left: 0px;
             font-size: 0.8rem;
         }
-
-
     </style>
 
 </head>
@@ -277,15 +285,15 @@
         <div class="ww-home-page" id="home">
             <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
                 <div class="container ww-announcement-container"
-                     style="position: relative; margin-top: -40vh;">
+                     style="position: relative; margin-top: -45vh;">
 
-                    <p class="ww-couple-name ww-title" style="font-size:1.6em; position:relative; margin-bottom: 0">박영진
-                        <span style="font-size:1.6em; font-family: sans-serif;">&</span> 정세라</p>
+                    <p class="ww-couple-name ww-title" style="font-size:1.2em; position:relative; margin-bottom: 0">박영진
+                        <span style="font-size:1em; font-family: sans-serif;">&</span> 정세라</p>
                     <p class="h2 ww-title"
-                       style="font-family: 'Noto Serif KR', serif; font-size:1.6em; letter-spacing:-1px">
-                        <b style="font-size:1.6em;">2024. 12. 14.<br> SAT PM 12:00</b>
-                        <br><span>메르시앙 웨딩홀</span>
-                        <br><span style="font-size: 0.8em">경남 김해시 내외중앙로 137</span>
+                       style="font-family: 'SejongGeulggot', serif; font-size:1em; letter-spacing:-1px">
+                        <span style="font-size:1em;">2024. 12. 14. SAT PM 12:00</span>
+                        <br><span style="font-size: 0.9em">경남 김해시 내외중앙로 137 휴앤락 6층,</span>
+                        <br><span style="font-size: 0.9em">메르시앙 웨딩홀 內 포레스트 가든홀</span>
 
 
                         <!--                        <br>경남 김해시 내외중앙로 137 휴앤락 6층,<br>-->
@@ -293,7 +301,7 @@
                     </p>
 
                     <p class="h2 ww-title" style="font-family: 'Gugi', cursive; font-size:1.0em;
-margin-top:45vh;">
+margin-top:55vh;">
                         | We are getting married |
                     </p>
                     <p class="ww-couple-name ww-title" style="font-size:3em">James & Sarah</p>
@@ -325,7 +333,7 @@ margin-top:45vh;">
             <div class="container ww-wedding-event align-items-center">
                 <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">초대합니다</h2>
                 <div class="col text-center mb-5">
-                    <h6 style="font-family: 'Noto Serif KR', serif;">
+                    <h6 style="font-family: 'Noto Serif KR', serif;"></h6>
                         <br>
                         <!-- 1144 삭제 -->
                         <!--                            <div class="h4"></div>-->
@@ -353,19 +361,22 @@ margin-top:45vh;">
                             <li></li>
 
                             <li class="pt-2">
-                                    <span class="pl-1 text-muted">
-                                        두 사람이 만나<br>
-                                        열두번의 계절을 지나왔습니다.<br>
+                                    <span class="pl-1 text-muted" style="font-size: 0.8em">
+                                        두 사람이 만나, 서로의 손을 잡고<br>
+                                        아름다운 열두번의 계절을 지나왔습니다.<br>
                                         <br>
-                                        주님 안에 새 가정을 기도로 세우고<br>
-                                        끝까지 좁은 길을 선택할 수 있도록<br>
+                                        이제 주님 안에서 한 마음으로<br>
+                                        새로운 가정을 이루고<br>
+                                        사랑의 길을 동행하고자 합니다.<br>
                                         <br>
-                                        둘이 하나가 되는 잔칫날<br>
-                                        아낌없는 격려와 기도로<br>
-                                        축복해주시면 감사하겠습니다.<br></span>
+                                        두 사람이 하나가 되는<br>
+                                        소중한 이 날<br>
+                                        귀한 발걸음으로 함께해주시고<br>
+                                        <br>
+                                        따뜻한 격려와 축복의 기도를<br>
+                                        부탁드립니다.<br></span>
                             </li>
                         </ul>
-                    </h6>
                 </div>
                 <div class="row">
                     <div class="col-md-7 col-sm-12">
@@ -373,12 +384,10 @@ margin-top:45vh;">
                             <div class="h4">웨딩 본식</div>
                             <ul>
                                 <li>
-                                    <i class="text-muted fas fa-map-marker-alt"></i>
                                     <span class="pl-2 text-muted">경남 김해시 내외중앙로 137 휴앤락 6층,</span><br>
                                     <span class="pl-2 text-muted">메르시앙 웨딩홀 內 포레스트 가든홀</span>
                                 </li>
                                 <li class="pt-2">
-                                    <i class="text-muted far fa-calendar-alt"></i>
                                     <span class="pl-2 text-muted">2024년 12월 14일, 12:00PM</span>
                                 </li>
                             </ul>
@@ -766,19 +775,16 @@ margin-top:45vh;">
 
                         <ul class="acc-ul" id="acc-list1">
                             <li>
-<!--                                <i class="text-muted far fa-acc-alt2"></i>-->
-                                <span class="text-muted">박광석 부산은행 277-12-021190-6 (박영진)</span>
+                                <span class="text-muted">박광석 부산은행 277-12-021190-6 <span style="font-size: 0.7em;">(박영진)</span></span>
                                 <button class="copy" data-account="277120211906">복사하기</button>
                             </li>
 
                             <li>
-<!--                                <i class="text-muted far fa-acc-alt2"></i>-->
                                 <span class="text-muted">최천숙 부산은행 277-12-000089-3 </span>
                                 <button class="copy" data-account="277120000893">복사하기</button>
                             </li>
 
                             <li>
-<!--                                <i class="text-muted far fa-acc-alt3"></i>-->
                                 <span class="text-muted">박영진 카카오뱅크 3333-05-3078634</span>
                                 <button class="copy" data-account="3333053078634">복사하기</button>
                             </li>
@@ -786,21 +792,16 @@ margin-top:45vh;">
                     </div>
                     <div class="col-md-6">
                         <div class="h5" id="acc-btn2">신부측 계좌번호</div>
-
-
                         <ul class="acc-ul" id="acc-list2">
                             <li>
-<!--                                <i class="text-muted far fa-acc-alt2 "></i>-->
                                 <span class="pl-2 text-muted">정덕구 경남은행 587-21-0093895</span>
                                 <button class="copy" data-account="587210093895">복사하기</button>
                             </li>
                             <li>
-<!--                                <i class="text-muted far fa-acc-alt2 "></i>-->
                                 <span class="pl-2 text-muted">라성숙 경남은행 578-22-0404169</span>
                                 <button class="copy" data-account="578220404169">복사하기</button>
                             </li>
                             <li>
-<!--                                <i class="text-muted far fa-acc-alt2 "></i>-->
                                 <span class="pl-2 text-muted">정세라 농협 866-12-431337</span>
                                 <button class="copy" data-account="86612431337">복사하기</button>
                             </li>
@@ -810,8 +811,6 @@ margin-top:45vh;">
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>
 <footer></footer>
@@ -945,9 +944,7 @@ form.addEventListener('submit', (event) => {
 
 
 <!--사진 갤러리 관련 스크립트-->
-
 <!-- 사진 모달 관련 -->
-
 
 <div class="modal" id="modal" onclick="closeModal()">
     <span class="prev" onclick="prevImage(event)">&lt;</span>
@@ -985,14 +982,12 @@ form.addEventListener('submit', (event) => {
         e.stopPropagation();
         currentIndex = (currentIndex + 1 + imageGallery.length) % imageGallery.length;
         document.getElementById('modalImage').src = imageGallery[currentIndex]
-
     }
 
     function prevImage(e){
         e.stopPropagation();
         currentIndex = (currentIndex - 1 + imageGallery.length) % imageGallery.length;
         document.getElementById('modalImage').src = imageGallery[currentIndex]
-
     }
 
     function preloadImages() {
@@ -1005,10 +1000,6 @@ form.addEventListener('submit', (event) => {
     preloadImages();
 
 </script>
-
-
-
-
 
 </body>
 </html>
