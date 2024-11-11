@@ -9751,7 +9751,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 body {
-    font-family: "Dosis", sans-serif;
+    /*font-family: "Dosis", sans-serif;*/
 }
 
 /* Home Page Style */
@@ -10027,7 +10027,7 @@ body {
 
 /* Common Style */
 .ww-title {
-    font-family: "Great Vibes", cursive;
+    /*font-family: "Great Vibes", cursive;*/
 }
 
 .ww-section {
