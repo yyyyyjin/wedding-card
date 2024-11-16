@@ -30,13 +30,6 @@
     <link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Gugi|Noto+Serif+KR|Stylish|Sunflower:300"
           rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!--    test preload -->
-<!--    <link rel="preload" href="images/main.jpg" as="image">-->
-
-
-    <!-- 구버전 주석처리 -->
-    <!--    <script src="https://code.jquery.com/jquery-2.2.1.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js" type="text/javascript"></script>
 
 
@@ -585,14 +578,13 @@ margin-top:55vh;">
 
                         </div>
 
-                        <!--                        <button id="load-more">+</button>-->
 
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="ww-section bg-light" id="comment"> <!-- 숨김 style="display: none" -->
+        <div class="ww-section bg-light" id="comment">
             <div class="ww-photo-gallery">
                 <div class="container">
                     <div class="col text-center">
@@ -958,8 +950,17 @@ form.addEventListener('submit', (event) => {
     function openModal(src) {
         const modal = document.getElementById('modal');
         const modalImage = document.getElementById('modalImage');
+
+        // 상대 경로 추출
+        const relativeSrc = src.split('/docs/')[1]; // 'images/' 이후의 경로만 추출
+
+        // src에 해당하는 이미지의 인덱스를 설정
+        currentIndex = imageGallery.indexOf(relativeSrc);
+
         modalImage.src = src;
         modal.style.display = 'flex';
+
+
     }
 
     function closeModal() {
