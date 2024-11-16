@@ -952,7 +952,7 @@ form.addEventListener('submit', (event) => {
         const modalImage = document.getElementById('modalImage');
 
         // 상대 경로 추출
-        const relativeSrc = src.split('/docs/')[1]; // 'images/' 이후의 경로만 추출
+        const relativeSrc = 'images/' + src.split('/images/')[1]; //
 
         // src에 해당하는 이미지의 인덱스를 설정
         currentIndex = imageGallery.indexOf(relativeSrc);
